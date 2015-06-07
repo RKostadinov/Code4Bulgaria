@@ -1,4 +1,4 @@
-   <?php
+<?php
    session_start();
 $dbhost = "localhost"; // this will ususally be 'localhost', but can sometimes differ
 $dbname = "sayit"; // the name of the database that you are going to use for this project
@@ -79,9 +79,9 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
                     <li><a href="about.html">За нас</a></li>
                     <li><a href="contact.html">Контакти</a></li>
                     <?php if(!isset($_SESSION['LoggedIn'])) : ?>
-                    <li class="active"><a class="btn" href="signin.html">Влез / Регистрация</a></li>
+                    <li class="active"><a class="btn" href="signin.php">Влез / Регистрация</a></li>
                 <?php elseif(isset($_SESSION['LoggedIn']) && $_SESSION['LoggedIn']== 1) : ?>
-                    <li class="active"><a class="btn" href="signin.html"><?php echo $_SESSION['email'] ?></a></li>
+                    <li class="active"><a class="btn" href="signin.php"><?php echo $_SESSION['email'] ?></a></li>
                     <a href="logout.php">Logout</a>
                 <?php endif; ?>
                     
@@ -112,9 +112,8 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <?php  if(isset($response)) echo $response; ?>
                             <h3 class="thin text-center">Влез в профила си</h3>
-                            <p class="text-center text-muted"><a href="signup.php">Регистрирай се </a> ако все още нямаш профил.</p>
+                            <p class="text-center text-muted"><a href="signup.php">Регистрирай се </a> ако все още нямаш профил. Регистрацията е с цел да улесни изпращането на сигнали. Личната Ви информация, ще бъде попълвана автоматично.</p>
                             <hr>
                             
                             <form action="signin.php" method="post">
@@ -126,7 +125,15 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
                                     <label>Парола <span class="text-danger">*</span></label>
                                     <input type="password" name="password" class="form-control">
                                 </div>
+                                </br>
+                                <?php
+                                if (isset($response)) {
+                                    echo "<div class=\"alert alert-danger alert-dismissable\">
+                                            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button> " . $response . "</div>";
+                                }
 
+
+                                ?>
                                 <hr>
 
                                 <div class="row">
