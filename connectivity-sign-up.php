@@ -18,8 +18,8 @@
                 $email = $_POST['email_value'];
                 $password = $_POST['pass'];
                 $hash = sha1($password);
-
                 $query = "INSERT INTO users (f_name, m_name, l_name, email, password) VALUES ('$f_name','$m_name', '$l_name', '$email','$hash')";
+
                 $data = mysql_query($query) or die(mysql_error());
                 if ($data) {
                     return "Регистрацията беше успяшна!";
