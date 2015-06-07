@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2015 at 06:05 PM
+-- Generation Time: Jun 07, 2015 at 09:13 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -28,12 +28,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `users` (
 `id` int(11) NOT NULL,
-  `f_name` varchar(255) NOT NULL,
-  `s_name` varchar(255) NOT NULL,
-  `l_name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `f_name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `m_name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `l_name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `f_name`, `m_name`, `l_name`, `email`, `password`) VALUES
+(28, 'tydbd', 'rthbdty', 'bjdtybj', 'dtb', 'tyu'),
+(29, 'aeht', 'aethc', 'ervaer', 'qwe', 'qwe');
 
 --
 -- Indexes for dumped tables
@@ -53,7 +61,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
