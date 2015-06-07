@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
 require_once 'connectivity-sign-up.php';
 if (isset($_POST['submit'])) {
     $response = SignUp();

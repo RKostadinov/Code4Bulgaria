@@ -1,5 +1,4 @@
 <?php
-   session_start();
 $dbhost = "localhost"; // this will ususally be 'localhost', but can sometimes differ
 $dbname = "sayit"; // the name of the database that you are going to use for this project
 $dbuser = "root"; // the email that you created, or were given, to access your database
@@ -16,7 +15,6 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
 
     $email = $_POST['email'];
     $password = sha1($_POST['password']);
-    echo $password;
     $checklogin = mysql_query("SELECT * FROM users WHERE email = '".$email."' AND password = '".$password."'");
     echo mysql_num_rows($checklogin); 
     if(mysql_num_rows($checklogin) == 1)
