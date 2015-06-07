@@ -1,55 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head lang="en">-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title></title>-->
-
-    <!--<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">-->
-    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
-    <!--<link rel="stylesheet" href="assets/css/font-awesome.min.css">-->
-
-    <!--&lt;!&ndash; Custom styles for our template &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >-->
-    <!--<link rel="stylesheet" href="assets/css/main.css">-->
-
-<!--</head>-->
-<!--<body>-->
-<!--<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>-->
-<!--<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>-->
-<!--<div class="container">-->
-    <!--<div class="row">-->
-        <!--<form role="form" id="contact-form" class="contact-form">-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-4">-->
-                    <!--<div class="form-group">-->
-                        <!--<input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-4">-->
-                    <!--<div class="form-group">-->
-                        <!--<input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-8">-->
-                    <!--<div class="form-group">-->
-                        <!--<textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-8">-->
-                    <!--<button type="submit" class="btn main-btn pull-right">Send a message</button>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</form>-->
-    <!--</div>-->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,31 +18,27 @@
     <!-- Custom styles for our template -->
     <link rel="stylesheet" href="http://localhost/Code4Bulgaria/assets/css/bootstrap-theme.css" media="screen" >
     <link rel="stylesheet" href="http://localhost/Code4Bulgaria/assets/css/main.css">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="http://localhost/Code4Bulgaria/assets/js/html5shiv.js"></script>
-    <script src="http://localhost/Code4Bulgaria/assets/js/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body class="home">
 <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top headroom" >
-    <div class="container">
-        <div class="navbar-header">
-            <!-- Button for smallest screens -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand" href="index.html"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="index.html"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="index.html">Начало</a></li>
+                    <li><a href="index.html#about_button">За нас</a></li>
+                    <li><a href="#footer">Контакти</a></li>
+                    <li><a class="btn" href="signin.php">Влез / Регистрация</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</div>
+    </div> 
 <!-- /.navbar -->
 
 
@@ -108,7 +52,7 @@
             <div class="row destacados">
                 <div class="col-md-4">
                     <div>
-                        <img src="assets\images\icons\restaurant.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                        <img src="assets/images/icons/restaurant.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
                         <h2>Заведения</h2>
                         <p>Потърпевш си на лошо обслужване, храната не отговаря на очакванията или не си доволен от нещо?</p>
                         <a id="place" class="btn btn-primary" title="Enlace" role="button">Подай сигнал »</a>
@@ -119,7 +63,7 @@
 
                 <div class="col-md-4">
                     <div>
-                        <img src="assets\images\icons\supermarket.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                        <img src="assets/images/icons/supermarket.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
                         <h2>Шопинг услуги</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -129,7 +73,7 @@
                 <section id="form-container-shop"></section>
                 <div class="col-md-4">
                     <div>
-                        <img src="assets\images\icons\online_order.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                        <img src="assets/images/icons/online_order.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
                         <h2>Онлайн услуги</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -140,7 +84,7 @@
                 <section id="form-container-online"></section>
                 <div class="col-md-4">
                     <div>
-                        <img src="assets\images\icons\administration.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                        <img src="assets/images/icons/administration.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
                         <h2>Административни услуги</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -150,7 +94,7 @@
                 <section id="form-container-admin"></section>
                 <div class="col-md-4">
                     <div>
-                        <img src="assets\images\icons\media.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                        <img src="assets/images/icons/media.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
                         <h2>Медия</h2></br>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -160,7 +104,7 @@
                 <section id="form-container-media"></section>
                 <div class="col-md-4">
                     <div>
-                        <img src="assets\images\icons\other.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                        <img src="assets/images/icons/other.png" alt="Texto Alternativo" class="img-circle img-thumbnail">
                         <h2>Други</h2><br>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -170,30 +114,13 @@
                 <section id="form-container-other"></section>
 
             </div>
-
-
-                <!--<a class="btn btn-action btn-lg restaurant" role="button">Ресторант</a>-->
-                <!--<a class="btn btn-action btn-lg supermarket" role="button">Супермаркет</a>-->
-            <!--</p>-->
         </div>
         <!--<div class="form-container"></div>-->
     </div>
 </header>
 <!-- /Header -->
 
-<!--&lt;!&ndash; Intro &ndash;&gt;-->
-<!--<div class="container text-center">-->
-    <!--<br> <br>-->
-    <!--<h2 class="thin">The best place to tell people why they are here</h2>-->
-    <!--<p class="text-muted">-->
-        <!--The difference between involvement and commitment is like an eggs-and-ham breakfast:<br>-->
-        <!--the chicken was involved; the pig was committed.-->
-    <!--</p>-->
-<!--</div>-->
-<!--&lt;!&ndash; /Intro&ndash;&gt;-->
-
-
-
+<!--  Foother -->
 <footer id="footer" class="top-space">
 
     <div class="footer1">
@@ -250,24 +177,13 @@
                         </p>
                     </div>
                 </div>
-
-                <!--<div class="col-md-6 widget">-->
-                    <!--<div class="widget-body">-->
-                        <!--<p class="text-right">-->
-                            <!--Copyright &copy; 2014, Your name. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>-->
-                        <!--</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-
             </div> <!-- /row of widgets -->
         </div>
     </div>
 
 </footer>
 
-
-
-
+<!-- Footer -->
 
 <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

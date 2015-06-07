@@ -122,3 +122,10 @@ img.pull-left { margin-right: 10px; }
     background: rgba(200, 200, 200, 0.1);
     transition: 0.5s;
 }
+
+#head .lead{color: #eaeaea ;}
+.tagline{ color: #000;font-size: 20px;}
+.about-app {
+	padding-bottom: 70px;
+}
+
