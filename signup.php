@@ -70,10 +70,10 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav pull-right">
-                <li><a href="index.html">Начало</a></li>
-                <li><a href="about.html">За нас</a></li>
-                <li><a href="contact.html">Контакти</a></li>
-                <li class="active"><a class="btn" href="signin.html">Влез / Регистрация</a></li>
+                <li class="active"><a href="index.html">Начало</a></li>
+                <li><a href="index.html#about_button">За нас</a></li>
+                <li><a href="#footer">Контакти</a></li>
+                <li><a class="btn" href="signin.html">Влез / Регистрация</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -145,13 +145,13 @@ if (isset($_POST['submit'])) {
 								<hr>
 
 								<div class="row">
-									<div class="col-lg-8">
+									<div class="col-lg-6">
 										<label class="checkbox">
 											<input type="checkbox"> 
-											I've read the <a href="page_terms.html">Terms and Conditions</a>
+											Прочетох и съм съгласен с <a href="#">условията за ползване</a>.
 										</label>                        
 									</div>
-									<div class="col-lg-4 text-right">
+									<div class="col-lg-6 text-right">
                                         <!--<button type="submit" class="btn main-btn pull-right">Сигнализирай</button>-->
                                         <input class="btn btn-action" id="button" type="submit" name="submit" value="Регистрирай се">
 <!--										<button class="btn btn-action" type="submit" name="submit" >Регистрирай се</button>-->
@@ -249,5 +249,6 @@ if (isset($_POST['submit'])) {
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+    <script src="assets/js/scroll.js"></script>
 </body>
 </html>
