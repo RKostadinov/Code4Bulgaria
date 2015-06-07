@@ -1,4 +1,5 @@
 <?php
+    session_start();
     function login_navbar($SESSION) {
 if(!isset($SESSION["LoggedIn"])) {
     $menu = '<li class="active"><a class="btn" href="signin.php">Влез / Регистрация</a></li>';
@@ -12,11 +13,11 @@ if(!isset($SESSION["LoggedIn"])) {
             <div class="navbar-header">
                 <!-- Button for smallest screens -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.html"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
+                <a class="navbar-brand" href="index.php"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="index.php">Начало</a></li>
                     <li><a href="about.html">За нас</a></li>
                     <li><a href="contact.html">Контакти</a></li>'.
                     $menu
