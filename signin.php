@@ -16,7 +16,6 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
     $email = $_POST['email'];
     $password = sha1($_POST['password']);
     $checklogin = mysql_query("SELECT * FROM users WHERE email = '".$email."' AND password = '".$password."'");
-    echo mysql_num_rows($checklogin); 
     if(mysql_num_rows($checklogin) == 1)
     {
         $row = mysql_fetch_array($checklogin);
