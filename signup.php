@@ -60,25 +60,11 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-<!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-    <div class="container">
-        <div class="navbar-header">
-            <!-- Button for smallest screens -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand" href="index.html"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="index.html">Начало</a></li>
-                <li><a href="index.html#about_button">За нас</a></li>
-                <li><a href="#footer">Контакти</a></li>
-                <li><a class="btn" href="signin.html">Влез / Регистрация</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</div>
-<!-- /.navbar -->
+
+<?php
+    require_once 'header.php';
+    login_navbar($_SESSION);
+?>
 
 	<header id="head" class="secondary"></header>
 
@@ -86,7 +72,7 @@ if (isset($_POST['submit'])) {
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
+			<li><a href="index.php">Home</a></li>
 			<li class="active">Registration</li>
 		</ol>
 

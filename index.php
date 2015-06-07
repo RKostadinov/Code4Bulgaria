@@ -26,25 +26,11 @@
 </head>
 
 <body class="home">
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="#">Начало</a></li>
-					<li><a href="#about_button">За нас</a></li>
-					<li><a href="#footer">Контакти</a></li>
-					<li><a class="btn" href="signin.php">Влез / Регистрация</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
+
+<?php
+    require_once 'header.php';
+    login_navbar($_SESSION);
+?>
 
 	<!-- Header -->
 	<header id="head">
@@ -53,7 +39,7 @@
 				<h1 class="lead">Нередност или лошо обслужване?</h1>
 				<p class="tagline">Чувствай се свободен да споделиш.</p>
 			</div>
-				<p><a class="btn btn-default btn-lg" role="button" href="opinions.html">ПОТЪРСИ МНЕНИЯ</a> <a href="signal.html"class="btn btn-action btn-lg" role="button">СИГНАЛИЗИРАЙ</a></p>
+				<p><a class="btn btn-default btn-lg" role="button" href="opinions.html">ПОТЪРСИ МНЕНИЯ</a> <a href="signal.php"class="btn btn-action btn-lg" role="button">СИГНАЛИЗИРАЙ</a></p>
 		</div>
 	</header>
 	<!-- /Header -->
