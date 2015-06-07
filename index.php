@@ -26,9 +26,10 @@
 </head>
 
 <body class="home">
+
 <?php
-require_once 'header.php';
-login_navbar($_SESSION);
+    require_once 'header.php';
+    login_navbar($_SESSION);
 ?>
 
 	<!-- Header -->

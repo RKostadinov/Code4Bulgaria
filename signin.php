@@ -76,7 +76,7 @@ login_navbar($_SESSION);
     <div class="container">
 
         <ol class="breadcrumb">
-            <li><a href="index.html">Начало</a></li>
+            <li><a href="index.php">Начало</a></li>
             <li class="active">Потребителски достъп</li>
         </ol>
 
