@@ -1,10 +1,6 @@
-<?php
-require_once("../send_email.php");
-sendMail("admin");
-?>
 <div class="container">
     <div class="panel">
-        <form role="form" id="contact-form" class="contact-form" method="post" action="send_email.php">
+        <form role="form" id="contact-form" class="contact-form" method="post" action="#">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
@@ -50,7 +46,7 @@ sendMail("admin");
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <input type="submit" class="btn main-btn pull-right" value="Сигнализирай">
+                    <input type="submit" class="btn main-btn pull-right" value="Сигнализирай" name="admin_send">
                 </div>
             </div>
         </form>

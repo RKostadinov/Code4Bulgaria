@@ -1,3 +1,24 @@
+<?php
+require_once("send_email.php");
+if(isset($_POST['other_send'])) {
+    sendMail("other");
+}
+if(isset($_POST['online_send'])) {
+    sendMail("online");
+}
+if(isset($_POST['admin_send'])) {
+    sendMail("admin");
+}
+if(isset($_POST['media_send'])) {
+    sendMail("media");
+}
+if(isset($_POST['place_send'])) {
+    sendMail("place");
+}
+if(isset($_POST['shop_send'])) {
+    sendMail("shop");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +28,7 @@
     <meta name="description" content="">
 
 
-    <title>Progressus - Free business bootstrap template by GetTemplate</title>
+    <title>sayIt</title>
 
     <link rel="shortcut icon" href="http://localhost/Code4Bulgaria/assets/images/gt_favicon.png">
 

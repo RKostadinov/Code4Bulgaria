@@ -1,31 +1,27 @@
-<?php
-require_once("../send_email.php");
-sendMail("place");
-?>
 <div class="container">
     <div class="panel">
-        <form role="form" id="contact-form" class="contact-form">
+        <form role="form" id="contact-form" class="contact-form" method="post" action="#">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="Name" id="Name" placeholder="Име">
+                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Име">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="Name" id="Name" placeholder="Презиме">
+                        <input type="text" class="form-control" name="middle_name" id="middle_name" placeholder="Презиме">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Фамилия">
+                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Фамилия">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="Name" id="Name" placeholder="Телефон">
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Телефон">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -37,32 +33,32 @@ sendMail("place");
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="Name" id="Name" placeholder="Име на заведението">
+                        <input type="text" class="form-control" name="shop_name" id="shop_name" placeholder="Име на заведението">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Местоположение на заведението">
+                        <input type="text" class="form-control" name="address" id="address" placeholder="Местоположение на заведението">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="text" id="text" placeholder="Тема на проблема">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Тема на проблема">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Описание на проблема"></textarea>
+                        <textarea class="form-control textarea" rows="3" name="description" id="description" placeholder="Описание на проблема"></textarea>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="btn main-btn pull-right">Сигнализирай</button>
+                    <input type="submit" class="btn main-btn pull-right" value="Сигнализирай" name="place_send">
                 </div>
             </div>
         </form>

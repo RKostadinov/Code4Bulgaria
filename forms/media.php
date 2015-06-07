@@ -1,10 +1,6 @@
-<?php
-require_once("../send_email.php");
-sendMail("media");
-?>
 <div class="container">
     <div class="panel">
-        <form role="form" id="contact-form" class="contact-form">
+        <form role="form" id="contact-form" class="contact-form" method="post" action="#">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
@@ -36,7 +32,7 @@ sendMail("media");
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <select type="text" class="form-control" name="type" id="type" placeholder="Вид на медията">
+                    <select type="text" class="form-control" name="type" id="type">
                         <option>Вестник</option>
                         <option>Списание</option>
                         <option>Радио</option>
@@ -66,7 +62,7 @@ sendMail("media");
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="btn main-btn pull-right">Сигнализирай</button>
+                    <input type="submit" class="btn main-btn pull-right" value="Сигнализирай" name="media_send">
                 </div>
             </div>
         </form>
