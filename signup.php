@@ -1,3 +1,10 @@
+<?php session_start();
+require_once 'connectivity-sign-up.php';
+if (isset($_POST['submit'])) {
+    $response = SignUp();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +57,6 @@
             });
         });
     </script>
-
 </head>
 
 <body>
@@ -97,10 +103,18 @@
 							<h3 class="thin text-center">Регистрирай се сега</h3>
 							<p class="text-center text-muted">Ако вече имате съществуващ акаунт - <a href="signin.html">Влезте</a> чрез него. Регистрацията е с цел да улесни изпращането на сигнали. Личната Ви информация, ще бъде попълвана автоматично.</p>
 							<hr>
-							<form method="post" action="connectivity-sign-up.php" accept-charset="utf-8">
-<!--                                --><?php //if (isset($response))
-//                                    echo "congrats";
-//                                ?>
+							<form method="post" action="#">
+                                <?php
+                                    if (isset($response)) {
+                                        echo "<div class=\"alert alert-danger alert-dismissable\">
+                                            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>
+                                            $response .
+                                        </div>";
+//                                        echo $response;
+                                    }
+
+
+                                ?>
 								<div class="top-margin">
 									<label>Първо име <span class="text-danger">*</span></label>
 									<input type="text" name="first_name" class="form-control" autocomplete="off">
@@ -115,7 +129,7 @@
 								</div>
 								<div class="top-margin">
 									<label>Имейл <span class="text-danger">*</span></label>
-									<input type="text" name="email_value" class="form-control" autocomplete="off">
+									<input type="email" name="email_value" class="form-control" autocomplete="off">
 								</div>
 								<div class="row top-margin">
 									<div class="col-sm-6">
@@ -139,8 +153,8 @@
 									</div>
 									<div class="col-lg-4 text-right">
                                         <!--<button type="submit" class="btn main-btn pull-right">Сигнализирай</button>-->
-                                        <!--<input id="button" type="submit" name="submit" value="Sign-Up">-->
-										<button class="btn btn-action" type="submit" name="submit" >Регистрирай се</button>
+                                        <input class="btn btn-action" id="button" type="submit" name="submit" value="Регистрирай се">
+<!--										<button class="btn btn-action" type="submit" name="submit" >Регистрирай се</button>-->
 									</div>
 								</div>
 							</form>
