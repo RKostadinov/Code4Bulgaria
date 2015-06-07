@@ -14,7 +14,6 @@ $("a[role='button']").click(function(){
 
 
     }
-    console.log($(window).width());
 
     if($(window).width() < 990){
         if(current_id == id){
