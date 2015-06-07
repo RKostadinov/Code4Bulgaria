@@ -23,7 +23,7 @@ $("a[role='button']").click(function(){
                 current_container = null;
             }
             else {
-                $("#form-container-" + id).load("forms/" + id + ".html" , function(){
+                $("#form-container-" + id).load("forms/" + id + ".php" , function(){
                     $("#form-container-" + id).show("slow");
                 });
                 current_id = $(this).attr('id');
@@ -32,7 +32,7 @@ $("a[role='button']").click(function(){
         }
         else if(current_id == null){
 
-            $("#form-container-" + id).load("forms/" + id + ".html" , function(){
+            $("#form-container-" + id).load("forms/" + id + ".php" , function(){
                 $("#form-container-" + id).show("slow");
             });
             current_id = $(this).attr('id');
@@ -41,14 +41,14 @@ $("a[role='button']").click(function(){
         else{
             if($("#form-container-" + current_id).is(":visible")) {
                 $("#form-container-" + current_id).hide("slow");
-                $("#form-container-" + id).load("forms/" + id + ".html", function () {
+                $("#form-container-" + id).load("forms/" + id + ".php", function () {
                     $("#form-container-" + id).show("slow");
                 });
                 current_id = $(this).attr('id');
                 current_container = "#form-container-" + id;
             }
             else {
-                $("#form-container-" + id).load("forms/" + id + ".html" , function(){
+                $("#form-container-" + id).load("forms/" + id + ".php" , function(){
                     $("#form-container-" + id).show("slow");
                 });
                 current_id = $(this).attr('id');
@@ -63,7 +63,7 @@ $("a[role='button']").click(function(){
                 current_container = null;
             }
             else {
-                $(container).load("forms/" + id + ".html", function () {
+                $(container).load("forms/" + id + ".php", function () {
                     $(container).show("slow");
                 });
                 current_id = $(this).attr('id');
@@ -71,7 +71,7 @@ $("a[role='button']").click(function(){
             }
         }
         else if (current_id == null) {
-            $(container).load("forms/" + id + ".html", function () {
+            $(container).load("forms/" + id + ".php", function () {
                 $(container).show("slow");
             });
             current_id = $(this).attr('id');
@@ -82,14 +82,14 @@ $("a[role='button']").click(function(){
 
                 $(current_container).hide("slow");
 
-                $(container).load("forms/" + id + ".html", function () {
+                $(container).load("forms/" + id + ".php", function () {
                     $(container).show("slow");
                 });
                 current_id = $(this).attr('id');
                 current_container = container;
             }
             else {
-                $(current_container).load("forms/" + current_id + ".html", function () {
+                $(current_container).load("forms/" + current_id + ".php", function () {
                     $(current_container).show("slow");
                 });
                 current_id = $(this).attr('id');

@@ -31,18 +31,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 form-group">
-                    <select type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Вид на медията">
-                        <option>Вестник</option>
-                        <option>Списание</option>
-                        <option>Радио</option>
-                        <option>Телевизия</option>
-                        <option>Друго</option>
-                    </select>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Име на верига">
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="Име на медията">
+                        <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="Местоположение на обект">
                     </div>
                 </div>
             </div>
@@ -56,7 +52,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Описание на пробелма"></textarea>
+                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Описание на проблема"></textarea>
                     </div>
                 </div>
             </div>

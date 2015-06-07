@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Описание на пробелма"></textarea>
+                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Описание на проблема"></textarea>
                     </div>
                 </div>
             </div>
