@@ -129,3 +129,12 @@ img.pull-left { margin-right: 10px; }
 	padding-bottom: 70px;
 }
 
+/* Search Box */
+.searchBox {width: 100%; padding-bottom: 40px;}
+.searchBox form {width: 60%; padding: 0; margin: 0 auto;}
+.searchBox input {width: 92%; margin: 0 auto; padding: 10px 30px; border-radius: 20px; font-size: 12px; color: #043777; background: #FFF url(../images/zoom.png) no-repeat left 10px center;}
+
+.height {
+	min-height: 200px;
+	display: block;
+}
