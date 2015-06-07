@@ -1,9 +1,6 @@
 <?php
 require_once("../send_email.php");
-if (isset($_POST['submit'])) {
-    var_dump($_POST);
-}
-
+sendMail("admin");
 ?>
 <div class="container">
     <div class="panel">
