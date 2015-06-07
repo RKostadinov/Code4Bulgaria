@@ -4,8 +4,8 @@
 if(!isset($SESSION["LoggedIn"])) {
     $menu = '<li class="active"><a class="btn" href="signin.php">Влез / Регистрация</a></li>';
 } elseif(isset($SESSION["LoggedIn"]) && $SESSION["LoggedIn"]== 1) {
-    $menu = "<li class=\"active\"><a class=\"btn\" href=\"signin.php\">{$SESSION["email"]}</a></li>
-    <a href=\"logout.php\">Logout</a>";
+    $menu = "<li class=\"active\"><a class=\"btn\" href=\"logout.php\">{$SESSION["email"]} / Logout</a></li>
+//    <a href=\"logout.php\"></a>";
 }
 
     echo '<div class="navbar navbar-inverse navbar-fixed-top headroom" >
