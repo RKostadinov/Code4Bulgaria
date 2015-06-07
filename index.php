@@ -39,7 +39,7 @@
 				<h1 class="lead">Нередност или лошо обслужване?</h1>
 				<p class="tagline">Чувствай се свободен да споделиш.</p>
 			</div>
-				<p><a class="btn btn-default btn-lg" role="button" href="opinions.html">ПОТЪРСИ МНЕНИЯ</a> <a href="signal.php"class="btn btn-action btn-lg" role="button">СИГНАЛИЗИРАЙ</a></p>
+				<p><a class="btn btn-default btn-lg" role="button" href="opinions.php">ПОТЪРСИ МНЕНИЯ</a> <a href="signal.php"class="btn btn-action btn-lg" role="button">СИГНАЛИЗИРАЙ</a></p>
 		</div>
 	</header>
 	<!-- /Header -->

@@ -25,25 +25,10 @@
 </head>
 
 <body class="home">
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.php"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="index.php">Начало</a></li>
-					<li><a href="#about_button">За нас</a></li>
-					<li><a href="#footer">Контакти</a></li>
-					<li><a class="btn" href="signin.php">Влез / Регистрация</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
+<?php
+require_once 'header.php';
+login_navbar($_SESSION);
+?>
 
 	<!-- Intro -->
 	<div class="container text-center about-app">
