@@ -9,7 +9,7 @@ $("a[role='button']").click(function(){
     if (id === "place" || id === "shop" || id === "online") {
         var container = "#form-container-online";
 
-    } else if (id === "other" || id === "media") {
+    } else if (id === "other" || id === "media" || id ==="admin") {
         var container = "#form-container-other";
 
 
