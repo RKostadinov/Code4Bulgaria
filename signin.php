@@ -14,11 +14,11 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['email']))
 elseif(!empty($_POST['email']) && !empty($_POST['password']))
 {
 
-    $email = mysql_real_escape_string($_POST['email']);
-    $password = md5(mysql_real_escape_string($_POST['password']));
-     
-    $checklogin = mysql_query("SELECT * FROM users WHERE email = '".$email."' AND Password = '".$password."'");
-     
+    $email = $_POST['email'];
+    $password = sha1($_POST['password']);
+    echo $password;
+    $checklogin = mysql_query("SELECT * FROM users WHERE email = '".$email."' AND password = '".$password."'");
+    echo mysql_num_rows($checklogin); 
     if(mysql_num_rows($checklogin) == 1)
     {
         $row = mysql_fetch_array($checklogin);
@@ -27,7 +27,6 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
         $_SESSION['email'] = $email;
         $_SESSION['LoggedIn'] = 1;
          
-        echo "<h1>Success</h1>";
         $response = 'You are now logged in';
 
        // echo "<meta http-equiv='refresh' content='=2;index.php' />";
@@ -79,7 +78,13 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
                     <li><a href="index.html">Начало</a></li>
                     <li><a href="about.html">За нас</a></li>
                     <li><a href="contact.html">Контакти</a></li>
+                    <?php if(!isset($_SESSION['LoggedIn'])) : ?>
                     <li class="active"><a class="btn" href="signin.html">Влез / Регистрация</a></li>
+                <?php elseif(isset($_SESSION['LoggedIn']) && $_SESSION['LoggedIn']== 1) : ?>
+                    <li class="active"><a class="btn" href="signin.html"><?php echo $_SESSION['email'] ?></a></li>
+                    <a href="logout.php">Logout</a>
+                <?php endif; ?>
+                    
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -109,7 +114,7 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
                         <div class="panel-body">
                             <?php  if(isset($response)) echo $response; ?>
                             <h3 class="thin text-center">Влез в профила си</h3>
-                            <p class="text-center text-muted"><a href="signup.html">Регистрирай се </a> ако все още нямаш профил.</p>
+                            <p class="text-center text-muted"><a href="signup.php">Регистрирай се </a> ако все още нямаш профил.</p>
                             <hr>
                             
                             <form action="signin.php" method="post">
