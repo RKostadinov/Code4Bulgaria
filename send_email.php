@@ -33,7 +33,7 @@
             $email_message .= "Phone: " . $phone . "\n";
             $email_message .= "Description: " . $description . "\n";
 
-            $sendgrid = new SendGrid('rkostadinov', 'me3eto123');
+            $sendgrid = new SendGrid('', '');
             $email = new SendGrid\Email();
             $email
                 ->addTo('sayit.report@gmail.com')
