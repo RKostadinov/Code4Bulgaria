@@ -1,5 +1,6 @@
 <?php
 require_once 'connectivity-sign-up.php';
+require_once 'header.php';
 if (isset($_POST['submit'])) {
     $response = SignUp();
 }
@@ -62,9 +63,31 @@ if (isset($_POST['submit'])) {
 <body>
 
 <?php
-    require_once 'header.php';
-    login_navbar($_SESSION);
+if(!isset($_SESSION["LoggedIn"])) {
+    $menu = '<li class="active"><a class="btn" href="signin.php">Влез / Регистрация</a></li>';
+} elseif(isset($_SESSION["LoggedIn"]) && $_SESSION["LoggedIn"]== 1) {
+    $menu = "<li class=\"active\"><a class=\"btn\" href=\"logout.php\">{$_SESSION["email"]} / Logout</a></li>";
+}
+
+echo '<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="index.php"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="index.php">Начало</a></li>
+                    <li><a href="index.php#about_button">За нас</a></li>
+                    <li><a href="#footer">Контакти</a></li>'.
+    $menu
+    .'</ul>
+            </div>
+        </div>
+    </div> ';
 ?>
+
 
 	<header id="head" class="secondary"></header>
 
@@ -87,7 +110,7 @@ if (isset($_POST['submit'])) {
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<h3 class="thin text-center">Регистрирай се сега</h3>
-							<p class="text-center text-muted">Ако вече имате съществуващ акаунт - <a href="signin.html">Влезте</a> чрез него. Регистрацията е с цел да улесни изпращането на сигнали. Личната Ви информация, ще бъде попълвана автоматично.</p>
+							<p class="text-center text-muted">Ако вече имате съществуващ акаунт - <a href="signin.php">Влезте</a> чрез него. Регистрацията е с цел да улесни изпращането на сигнали. Личната Ви информация, ще бъде попълвана автоматично.</p>
 							<hr>
 							<form method="post" action="#">
                                 <?php

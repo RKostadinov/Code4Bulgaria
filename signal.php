@@ -1,5 +1,6 @@
 <?php
 require_once("send_email.php");
+require_once 'header.php';
 if(isset($_POST['other_send'])) {
     sendMail("other");
 }
@@ -42,27 +43,33 @@ if(isset($_POST['shop_send'])) {
 </head>
 
 <body class="home">
-<!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+<?php
+if(!isset($_SESSION["LoggedIn"])) {
+    $menu = '<li class="active"><a class="btn" href="signin.php">Влез / Регистрация</a></li>';
+} elseif(isset($_SESSION["LoggedIn"]) && $_SESSION["LoggedIn"]== 1) {
+    $menu = "<li class=\"active\"><a class=\"btn\" href=\"logout.php\">{$_SESSION["email"]} / Logout</a></li>";
+}
+
+echo '<div class="navbar navbar-inverse navbar-fixed-top headroom" >
         <div class="container">
             <div class="navbar-header">
                 <!-- Button for smallest screens -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="index.html"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
+                <a class="navbar-brand" href="index.php"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="index.html">Начало</a></li>
-                    <li><a href="index.html#about_button">За нас</a></li>
-                    <li><a href="#footer">Контакти</a></li>
-                    <li><a class="btn" href="signin.php">Влез / Регистрация</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
+                    <li><a href="index.php">Начало</a></li>
+                    <li><a href="index.php#about_button">За нас</a></li>
+                    <li><a href="#footer">Контакти</a></li>'.
+    $menu
+    .'</ul>
+            </div>
         </div>
-    </div> 
-<!-- /.navbar -->
+    </div> ';
+?>
 
-
+<header id="head" class="secondary"></header>
 <!--&lt;!&ndash; Header &ndash;&gt;-->
 <header id="signal">
     <div class="container">

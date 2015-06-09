@@ -1,4 +1,6 @@
 <?php
+require_once 'header.php';
+
 $dbhost = "localhost"; // this will ususally be 'localhost', but can sometimes differ
 $dbname = "sayit"; // the name of the database that you are going to use for this project
 $dbuser = "root"; // the email that you created, or were given, to access your database
@@ -6,6 +8,7 @@ $dbpass = ""; // the password that you created, or were given, to access your da
  
 mysql_connect($dbhost, $dbuser, $dbpass) or die("MySQL Error: " . mysql_error());
 mysql_select_db($dbname) or die("MySQL Error: " . mysql_error());
+
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['email']))
 {
     $response = 'You are already logged in';
@@ -20,12 +23,12 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
     {
         $row = mysql_fetch_array($checklogin);
         $email = $row['email'];
-         
+//        session_start();
         $_SESSION['email'] = $email;
         $_SESSION['LoggedIn'] = 1;
          
         $response = 'You are now logged in';
-
+        header('Location: index.php');
        // echo "<meta http-equiv='refresh' content='=2;index.php' />";
     }
     else
@@ -63,8 +66,29 @@ elseif(!empty($_POST['email']) && !empty($_POST['password']))
 
 <body>
 <?php
-require_once 'header.php';
-login_navbar($_SESSION);
+if(!isset($_SESSION["LoggedIn"])) {
+    $menu = '<li class="active"><a class="btn" href="signin.php">Влез / Регистрация</a></li>';
+} elseif(isset($_SESSION["LoggedIn"]) && $_SESSION["LoggedIn"]== 1) {
+    $menu = "<li class=\"active\"><a class=\"btn\" href=\"logout.php\">{$_SESSION["email"]} / Logout</a></li>";
+}
+
+echo '<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="index.php"><img src="assets/images/label.png" alt="Progressus HTML5 template"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="index.php">Начало</a></li>
+                    <li><a href="index.php#about_button">За нас</a></li>
+                    <li><a href="#footer">Контакти</a></li>'.
+    $menu
+    .'</ul>
+            </div>
+        </div>
+    </div> ';
 ?>
 
     <header id="head" class="secondary"></header>
